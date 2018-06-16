@@ -1,5 +1,5 @@
 require 'pry'
-class MusicLibraryController
+class MusicLibraryController - CLI Methods
 
   def initialize(path = './db/mp3s')
     MusicImporter.new(path).import
@@ -71,3 +71,5 @@ class MusicLibraryController
   end
 
 end
+
+self.list_songs
