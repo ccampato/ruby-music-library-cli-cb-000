@@ -72,4 +72,4 @@ class MusicLibraryController
 
 end
 
-self.list_songs
+list_songs
