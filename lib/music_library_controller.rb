@@ -59,18 +59,16 @@ class MusicLibraryController
     input = gets
     index = input.to_i - 1
     songs = Song.all.sort_by { |song| song.name }
-    #begin
-    if index > 0
-      matching_song = songs[index]
-      matching_song_name = matching_song.name
-      matching_song_artist = matching_song.artist.name
-      puts "Playing #{matching_song_name} by #{matching_song_artist}"
-    else
+    begin
+      if index > 0
+        matching_song = songs[index]
+        matching_song_name = matching_song.name
+        matching_song_artist = matching_song.artist.name
+        puts "Playing #{matching_song_name} by #{matching_song_artist}"
+      end
+    rescue
       nil
     end
-    #rescue
-    #  nil
-    #end
   end
 
 end
