@@ -65,6 +65,8 @@ class MusicLibraryController
       matching_song_name = matching_song.name
       matching_song_artist = matching_song.artist.name
       puts "Playing #{matching_song_name} by #{matching_song_artist}"
+    else
+      nil
     end
     #rescue
     #  nil
